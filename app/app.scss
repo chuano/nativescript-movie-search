@@ -1,0 +1,39 @@
+// NativeScript core theme
+// @see https://docs.nativescript.org/ui/theme
+@import '~nativescript-theme-core/scss/blue';
+
+// Override variables here
+
+@import '~nativescript-theme-core/scss/index';
+
+// Global SCSS styling
+// @see https://docs.nativescript.org/ui/styling
+
+.action-bar {
+  background-color: $blue;
+}
+.list-row {
+  padding: 5 15;
+}
+.list-title {
+  font-size: 22;
+  color: darken($ab-background, 25%);
+  font-width: bold;
+}
+.first-title {
+  font-size: 26;
+  color: darken($ab-background, 25%);
+  font-width: bold;
+  margin-bottom: 10;
+}
+.second-title {
+  font-size: 20;
+  color: darken($ab-background, 25%);
+  font-width: bold;
+  margin: 15 0 5 0;
+  border-bottom-color: #ccc;
+  border-bottom-width: 1;
+}
+.detal-poster {
+  height: 300;
+}
