@@ -26,8 +26,8 @@
     "vuex": "^3.1.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
     "babel-loader": "^8.0.2",
     "nativescript-dev-webpack": "^1.0.0",
     "nativescript-vue-template-compiler": "^2.0.0",
