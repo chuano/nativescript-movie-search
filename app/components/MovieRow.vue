@@ -1,11 +1,22 @@
 <template>
     <GridLayout columns="80, *" rows="auto, auto" class="list-row">
-      <Label :text="movie.title" colSpan="2" :row="0" :col="0" class="list-title"/>
+      <Label
+        :text="movie.title"
+        colSpan="2"
+        :row="0"
+        :col="0"
+        class="list-title"
+      />
       <StackLayout :row="1" :col="0" paddingRight="8" paddingTop="4">
         <Image :src="urlImage()"/>
         <Progress :value="movie.vote_average * 10"/>
       </StackLayout>
-      <Label :textWrap="true" :text="movie.overview ? movie.overview : 'Movie without overview.'" :row="1" :col="1"/>
+      <Label
+        :textWrap="true"
+        :text="movie.overview ? movie.overview : 'Movie without overview.'"
+        :row="1"
+        :col="1"
+      />
     </GridLayout>
 </template>
 

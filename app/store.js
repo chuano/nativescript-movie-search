@@ -16,8 +16,13 @@ export default new Vuex.Store({
     }
   },
   mutations: {
-    setMovies(state, movies) {
-      state.movies = movies;
+    addMovies(state, movies) {
+      movies.forEach((movie) => {
+        state.movies.push(movie)
+      });
+    },
+    clearMovies(state) {
+      state.movies = [];
     }
   },
   actions: {
@@ -25,11 +30,12 @@ export default new Vuex.Store({
       let url = 'https://api.themoviedb.org/3/search/movie' +
           '?api_key=' + config.apiKey +
           "&query=" + encodeURI(payload.searchTerm) +
-          "&language=" + config.language;
+          "&language=" + config.language +
+          "&page=" + payload.page;
 
       http.getJSON(url).then(
           (response) => {
-            context.commit('setMovies', response.results);
+            context.commit('addMovies', response.results);
             if (payload.callback) {
               payload.callback();
             }

@@ -1,17 +1,24 @@
 <template>
   <Page>
     <ActionBar :title="movie.title" class="action-bar">
-      <NavigationButton text="Go back" android.systemIcon="ic_menu_back" @tap="$navigateBack"/>
+      <NavigationButton
+        text="Go back"
+        android.systemIcon="ic_menu_back"
+        @tap="$navigateBack"
+      />
     </ActionBar>
     <ScrollView>
       <StackLayout padding="12">
         <Label :text="movie.title" :textWrap="true" class="first-title"/>
-        <Image :src="urlImage()" class="detal-poster"/>
+        <Image :src="urlImage()" class="detail-poster"/>
         <Label text="Average vote" class="second-title"/>
         <Label :text="movie.vote_average + '/10'"/>
         <Progress :value="movie.vote_average * 10"/>
         <Label text="Overview" class="second-title"/>
-        <Label :textWrap="true" :text="movie.overview ? movie.overview : 'Movie without overview.'"/>
+        <Label
+          :textWrap="true"
+          :text="movie.overview ? movie.overview : 'Movie without overview.'"
+        />
       </StackLayout>
     </ScrollView>
   </Page>
